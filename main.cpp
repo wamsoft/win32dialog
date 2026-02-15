@@ -10,6 +10,7 @@
 
 #include "ncbind.hpp"
 #include <commctrl.h>
+#include <commdlg.h>
 
 // CreateDialogIndirect のテーブル書き出し用クラス
 #include "dialog.hpp"
