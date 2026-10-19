@@ -198,12 +198,15 @@ class WIN32Dialog {
 	function setActive();
 
 	/**
-	 * ダイアログサイズの取得
-	 * @description 読み取り専用。サイズの変更はできないので注意
+	 * ダイアログの左端位置
+	 * @description 読み取り専用。位置の変更は setPos、サイズの変更は setSize を使用する
 	 */
 	property left   { getter; }
+	/** ダイアログの上端位置 (読み取り専用) */
 	property top    { getter; }
+	/** ダイアログの幅 (読み取り専用) */
 	property width  { getter; }
+	/** ダイアログの高さ (読み取り専用) */
 	property height { getter; }
 
 	/**
@@ -354,7 +357,7 @@ class WIN32Dialog {
 	 * @param window  [optional] オーナーwindow (void=オーナーなし,null=Application)
 	 * @param dsapp   [optional] プログレス表示中はアプリケーションウィンドウを無効にするか
 	 * @param breathe [optional] progressValueのsetterでbreatheするかどうか
-	 * @param activate[optional] 表示時にアクティブ化するかどうか
+	 * @param activate [optional] 表示時にアクティブ化するかどうか
 	 * @return        成功したらtrue
 	 * @description
 	 * プログレスダイアログのstyleにはWS_VISIBLEを指定しないこと
